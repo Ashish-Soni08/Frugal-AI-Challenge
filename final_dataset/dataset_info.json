@@ -1,0 +1,63 @@
+{
+  "builder_name": "parquet",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "frugalaichallenge-text-train",
+  "dataset_size": 2438986,
+  "description": "",
+  "download_checksums": {
+    "hf://datasets/QuotaClimat/frugalaichallenge-text-train@4748e7b548154d188a377a96e104b9b31fcd45b4/data/train-00000-of-00001.parquet": {
+      "num_bytes": 1022581,
+      "checksum": null
+    },
+    "hf://datasets/QuotaClimat/frugalaichallenge-text-train@4748e7b548154d188a377a96e104b9b31fcd45b4/data/test-00000-of-00001.parquet": {
+      "num_bytes": 247941,
+      "checksum": null
+    }
+  },
+  "download_size": 1270522,
+  "features": {
+    "quote": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "label_names": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "embedding": {
+      "feature": {
+        "dtype": "float64",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "label": {
+      "dtype": "int64",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 3709508,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 1966984,
+      "num_examples": 4872,
+      "dataset_name": "frugalaichallenge-text-train"
+    },
+    "test": {
+      "name": "test",
+      "num_bytes": 472002,
+      "num_examples": 1219,
+      "dataset_name": "frugalaichallenge-text-train"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}
