@@ -123,3 +123,11 @@ The dataset contains publicly available statements and quotes. Care has been tak
 | **5_science_is_unreliable** | Claims questioning climate science validity.                                                                                                                                                                                                   | Climate science is uncertain, unsound, unreliable, biased, flawed models, scientists are manipulating data, it's just a theory, the data is wrong, historical records don't support it, consensus is not science.                                                                 |
 | **6_proponents_biased** | Claims attacking climate scientists and activists.                                                                                                                                                                                               | Climate scientists are alarmist, biased, wrong, hypocritical, corrupt, politically motivated, they are in it for the money, activists are exaggerating, it's a political agenda.                                                                                                   |
 | **7_fossil_fuels_needed** | Claims promoting fossil fuel necessity.                                                                                                                                                                                                          | We need fossil fuels for economic growth, prosperity, to maintain our standard of living, renewable energy is not reliable, fossil fuels are essential, they provide cheap energy, transitioning away from fossil fuels will hurt the economy. 
+
+## Training Data
+
+The models use the QuotaClimat/frugalaichallenge-text-train dataset:
+
+- Size: ~6000 examples
+- Split: 80% train, 20% test
+- 8 categories of climate disinformation claims
