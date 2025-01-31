@@ -1,3 +1,48 @@
+---
+license: cc-by-nc-4.0
+task_categories:
+- text-classification
+language:
+- en
+pretty_name: Frugal AI Challenge 2025 - Text - Climate Disinformation
+size_categories:
+- 1K<n<10K
+dataset_info:
+  features:
+  - name: quote
+    dtype: string
+  - name: label
+    dtype: string
+  - name: source
+    dtype: string
+  - name: url
+    dtype: string
+  - name: language
+    dtype: string
+  - name: subsource
+    dtype: string
+  - name: id
+    dtype: 'null'
+  - name: __index_level_0__
+    dtype: int64
+  splits:
+  - name: train
+    num_bytes: 1966375
+    num_examples: 4872
+  - name: test
+    num_bytes: 471849
+    num_examples: 1219
+  download_size: 1270522
+  dataset_size: 2438224
+configs:
+- config_name: default
+  data_files:
+  - split: train
+    path: data/train-*
+  - split: test
+    path: data/test-*
+---
+
 # [Frugal-AI-Challenge](https://frugalaichallenge.org/)
 
 ## Goal
@@ -74,15 +119,15 @@ A major problem is the rise of climate related disinformation. A recent [scienti
 
 Therefore, the task is to **Detect the Climate Disinformation in Newspaper articles.**
 
-### Dataset
+## Dataset
 
-#### Dataset Summary
+### Dataset Summary
 
 A comprehensive collection of **~6000** `climate-related quotes and statements`, specifically `focused on identifying and categorizing climate disinformation narratives`. The dataset combines quotes and statements from various media sources, including television, radio, and online platforms, to help train models that can identify different types of climate disinformation claims. The labels are drawn from a simplified version of the [CARDS taxonomy](https://cardsclimate.com/) with only the **7** main labels.
 
-#### Dataset Creation
+## Dataset Creation
 
-##### Curation and Annotation
+### Curation and Annotation
 
 This dataset was compiled to help identify and understand common climate disinformation narratives in media and public discourse. **`It serves as a tool for training models that can automatically detect and categorize climate disinformation claims.`**
 
@@ -92,13 +137,7 @@ The dataset combines data from two main sources curated by the QuotaClimat & Dat
 
 2. [FLICC dataset](https://huggingface.co/datasets/fzanartu/FLICCdataset) from the paper ["Detecting Fallacies in Climate Misinformation: A Technocognitive Approach to Identifying Misleading Argumentation"](https://arxiv.org/abs/2405.08254) by Francisco Zanartu, John Cook, Markus Wagner, Julian Garcia - re-annotated with GPT4o-mini and manual validations.
 
-##### Personal and Sensitive Information
-
-The dataset contains publicly available statements and quotes. Care has been taken to focus on the claims themselves rather than personal information about individuals.
-
-`License:` [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
-
-#### Data Dictionary
+### Data Dictionary
 
 | Field Name          | Data Type | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Possible Values/Information                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Example Value                                                                                                                                                                                                                                                                                                                                                                                      |
 |----------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -131,3 +170,7 @@ The models use the QuotaClimat/frugalaichallenge-text-train dataset:
 - Size: ~6000 examples
 - Split: 80% train, 20% test
 - 8 categories of climate disinformation claims
+
+## Personal and Sensitive Information
+
+The dataset contains publicly available statements and quotes. Care has been taken to focus on the claims themselves rather than personal information about individuals.
